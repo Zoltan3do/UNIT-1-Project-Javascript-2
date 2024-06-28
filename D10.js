@@ -546,8 +546,10 @@ console.log("**************ESERCIZIO 29**************");
 function isItPrime(x) {
   let primo = true;
   for (let i = 2; i <= x / 2; i++)
-    if (x % i == 0)
+    if (x % i === 0) {
       primo = false;
+      break;
+    }
   return primo;
 }
-console.log(isItPrime(10));
+console.log(isItPrime(15));
