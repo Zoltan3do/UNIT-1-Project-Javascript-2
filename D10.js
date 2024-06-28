@@ -169,7 +169,7 @@ console.log(rollTheDices(3));
 */
 console.log("**************ESERCIZIO 9**************");
 function howManyDays(date) {
-  return Math.floor((new Date().getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+  return Math.floor((new Date() - date) / (1000 * 60 * 60 * 24));
 }
 console.log(howManyDays(new Date(2024, 1, 28)));
 
