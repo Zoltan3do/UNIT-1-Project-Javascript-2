@@ -351,6 +351,7 @@ function onlyTheYears() {
   let years = [];
   for (let i = 0; i < movies.length; i++)
     years.push(movies[i].Year)
+  // const years = movies.map(movie => movie.Year);
   return years;
 }
 console.log(onlyTheYears());
@@ -366,6 +367,14 @@ function onlyInLastMillennium() {
       notMillennialsFilms.push(movies[i]);
   return notMillennialsFilms;
 }
+
+// function onlyInLastMillennium() {
+//   const lastMillenniumMovies = movies.filter(movie => {
+//     return movie.Year[0] === "1";
+//   });
+//   return lastMillenniumMovies;
+// }
+
 console.log(onlyInLastMillennium());
 
 /* ESERCIZIO 16
@@ -388,6 +397,14 @@ function searchByTitle(str) {
       films.push(movies[i].Title);
   return films;
 }
+
+// function searchByTitle(str) {
+//   const filteredMovies = movies.filter(movie => {
+//     return movie.Title.toLowerCase().includes(str);
+//   });
+//   return filteredMovies.map(movie => movie.Title);
+// }
+
 console.log(searchByTitle("avengers"));
 
 /* ESERCIZIO 18
@@ -411,8 +428,7 @@ console.log(searchAndDivide("avengers"));
 console.log("**************ESERCIZIO 19**************");
 function removeIndex(n) {
   let films = [...movies];
-  if (n <= films.length)
-    films.splice(n, 1);
+  films.splice(n, 1);
   return films;
 }
 console.log(removeIndex(5));
